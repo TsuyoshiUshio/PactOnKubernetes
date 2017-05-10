@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pact-broker-service
+spec:
+  type: LoadBalancer
+  loadBalancerSourceRanges:
+  - 0.0.0.0/0
+  ports:
+  - name: pact-broker
+    port: 80
+    targetPort: 80
+    protocol: TCP
+  selector:
+    app: pact-broker
+
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: pact-broker-rc
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: pact-broker-rc
+        app: pact-broker
+    spec:
+      containers:
+      - name: pact-broker
+        image: dius/pact-broker
+        env:
+          - name: PACT_BROKER_DATABASE_USERNAME
+            value: pact
+          - name: PACT_BROKER_DATABASE_PASSWORD
+            value: pact
+          - name: PACT_BROKER_DATABASE_HOST
+            value: pgstorage.default.svc.cluster.local
+          - name: PACT_BROKER_DATABASE_NAME
+            value: pact
+        ports:
+        - name: api
+          containerPort: 80
+          protocol: TCP
