@@ -5,7 +5,7 @@ import "errors"
 // User is a representation of a User. Dah.
 type Product struct {
 	Id    int64
-	Name  string `json:"name"`
+	Name  string // `json:"name"`
 	Price int64
 }
 

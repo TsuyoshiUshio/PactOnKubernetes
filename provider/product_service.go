@@ -31,7 +31,7 @@ var productRepository = &types.ProductRepository{
 
 // ProductSearch is the sarch by keyword
 var ProductSearch = func(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json; charset=utf8")
+	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 
 	log.Printf("ProductSearch:")
 	body, err := ioutil.ReadAll(r.Body)
@@ -59,6 +59,8 @@ var ProductSearch = func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
 		res := types.SearchResponse{Product: product}
 		resBody, _ := json.Marshal(res)
+		log.Printf("*****************")
+		log.Printf(string(resBody))
 		w.Write(resBody)
 	}
 
