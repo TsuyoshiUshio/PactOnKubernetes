@@ -3,6 +3,7 @@ package consumer
 import (
 	"errors"
 	"fmt"
+	"log"
 	"net/url"
 	"os"
 	"strings"
@@ -13,6 +14,7 @@ import (
 	"net/http/httptest"
 
 	"github.com/pact-foundation/pact-go/dsl"
+	"github.com/pact-foundation/pact-go/types"
 )
 
 // test data
@@ -20,6 +22,7 @@ var dir, _ = os.Getwd()
 var pactDir = fmt.Sprintf("%s/../pacts", dir)
 var logDir = fmt.Sprintf("%s/log", dir)
 var pact dsl.Pact
+var pactBrokerURL = os.Getenv("PACT_BROKER_URL")
 var searchRequest = ` { "keyword":"protein"}`
 var form url.Values
 var rr http.ResponseWriter
@@ -29,6 +32,19 @@ func TestMain(m *testing.M) {
 	setup()
 	code := m.Run()
 	pact.WritePact()
+
+	publishRequest := types.PublishRequest{
+		PactBroker:      pactBrokerURL,
+		PactURLs:        []string{"../pacts/recommendation-product.json"},
+		ConsumerVersion: "1.0.0",
+		Tags:            []string{"latest", "dev"},
+	}
+	p := dsl.Publisher{}
+	err := p.Publish(publishRequest)
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	pact.Teardown()
 	os.Exit(code)
 }
