@@ -1,0 +1,17 @@
+hash: 4649486fb35bc90c3029800986b979df6e14eb032be90abb5f3ef80cda2961ce
+updated: 2017-05-21T08:52:36.81143556+09:00
+imports:
+- name: github.com/AlekSi/gocov-xml
+  version: d2f6da892a0d5e0b587526abf51349ad654ade51
+- name: github.com/axw/gocov
+  version: 3a69a0d2a4ef1f263e2d92b041a69593d6964fe8
+  subpackages:
+  - gocov
+- name: github.com/jstemmer/go-junit-report
+  version: cce73b49960a6473b4bb18efada12ce5f0208c37
+testImports:
+- name: github.com/pact-foundation/pact-go
+  version: ""
+  subpackages:
+  - dsl
+  - types

@@ -1,0 +1,13 @@
+package: github.com/TsuyoshiUshio/PactOnKubernetes/consumer
+import:
+- package: github.com/jstemmer/go-junit-report
+- package: github.com/axw/gocov
+  subpackages:
+  - gocov
+- package: github.com/AlekSi/gocov-xml
+testImport:
+- package: github.com/pact-foundation/pact-go
+  version: ~0.0.7
+  subpackages:
+  - dsl
+  - types

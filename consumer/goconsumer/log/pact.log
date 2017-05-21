@@ -1,0 +1,60 @@
+I, [2017-05-21T13:51:05.252723 #330]  INFO -- : Registered expected interaction POST /products/search
+D, [2017-05-21T13:51:05.252944 #330] DEBUG -- : {
+  "description": "A request to search with keyword 'protein'",
+  "provider_state": "Product protein exists",
+  "request": {
+    "method": "POST",
+    "path": "/products/search",
+    "body": {
+      "keyword": "protein"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "product": {
+        "Id": 1,
+        "Name": "Protein",
+        "Price": 40
+      }
+    }
+  }
+}
+I, [2017-05-21T13:51:05.255573 #330]  INFO -- : Received request POST /products/search
+D, [2017-05-21T13:51:05.255660 #330] DEBUG -- : {
+  "path": "/products/search",
+  "query": "",
+  "method": "post",
+  "body": {
+    "keyword": "protein"
+  },
+  "headers": {
+    "Content-Length": "27",
+    "Content-Type": "application/json",
+    "Host": "localhost:54246",
+    "User-Agent": "Go-http-client/1.1",
+    "Accept-Encoding": "gzip",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2017-05-21T13:51:05.256075 #330]  INFO -- : Found matching response for POST /products/search
+D, [2017-05-21T13:51:05.256169 #330] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "product": {
+      "Id": 1,
+      "Name": "Protein",
+      "Price": 40
+    }
+  }
+}
+I, [2017-05-21T13:51:05.258885 #330]  INFO -- : Verifying - interactions matched for example ""
+I, [2017-05-21T13:51:05.261086 #330]  INFO -- : Cleared interactions before example ""
+I, [2017-05-21T13:51:05.263641 #330]  INFO -- : Writing pact with details {:consumer=>{:name=>"recommendation"}, :pactFileWriteMode=>"overwrite", :provider=>{:name=>"product"}}
+I, [2017-05-21T13:51:05.263717 #330]  INFO -- : Writing pact for product to /Users/ushio/Codes/pact/samples/src/github.com/TsuyoshiUshio/PactOnKubernetes/consumer/goconsumer/../pacts/recommendation-product.json

@@ -1,0 +1,12 @@
+package: github.com/TsuyoshiUshio/PactOnKubernetes/provider
+import:
+- package: github.com/TsuyoshiUshio/PactOnKubernetes
+  subpackages:
+  - types
+testImport:
+- package: github.com/pact-foundation/pact-go
+  version: ~0.0.7
+  subpackages:
+  - dsl
+  - types
+  - utils

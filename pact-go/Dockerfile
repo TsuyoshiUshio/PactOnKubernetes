@@ -1,0 +1,7 @@
+FROM golang:1.8.1
+ENV APP_HOME /myapp
+WORKDIR $APP_HOME
+ENV GOPATH $APP_HOME
+ADD . $APP_HOME
+ENTRYPOINT ./pact-go_linux_amd64 daemon
+EXPOSE 6666

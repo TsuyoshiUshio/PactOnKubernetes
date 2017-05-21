@@ -22,6 +22,8 @@ func TestPact_Provider(t *testing.T) {
 	pact := createPact()
 
 	var pactBrokerURL = os.Getenv("PACT_BROKER_URL")
+	var pactHost = os.Getenv("PACT_HOST")
+	log.Printf("PACT_HOST=:%s:", pactHost)
 	err := pact.VerifyProvider(types.VerifyRequest{
 		ProviderBaseURL: fmt.Sprintf("http://localhost:%d", port),
 		PactURLs:        []string{fmt.Sprintf("%s/pacts/provider/product/consumer/recommendation/latest/dev", pactBrokerURL)},

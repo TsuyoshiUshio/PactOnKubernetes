@@ -1,0 +1,16 @@
+hash: 5b76337375910a2fd9a56454b1e77b5ef0ff1188e83d0b480cb5f56afc3bab2c
+updated: 2017-05-12T23:17:41.949230774-07:00
+imports:
+- name: github.com/TsuyoshiUshio/PactOnKubernetes
+  version: a8307dd91d72d880814a4d9e2dc1cf413e0e649d
+  subpackages:
+  - types
+testImports:
+- name: github.com/hashicorp/logutils
+  version: 0dc08b1671f34c4250ce212759ebd880f743d883
+- name: github.com/pact-foundation/pact-go
+  version: f3ba5c44e374913d3593a7970cead8c5e9e19a65
+  subpackages:
+  - dsl
+  - types
+  - utils
