@@ -1,8 +1,16 @@
-hash: 5b76337375910a2fd9a56454b1e77b5ef0ff1188e83d0b480cb5f56afc3bab2c
-updated: 2017-05-12T23:17:41.949230774-07:00
+hash: fd7e7c100ed7c7cae5d911f4125ba52e20a5f384637e30f097e3d5d1c940782e
+updated: 2017-05-21T22:34:11.873125786+09:00
 imports:
+- name: github.com/AlekSi/gocov-xml
+  version: d2f6da892a0d5e0b587526abf51349ad654ade51
+- name: github.com/axw/gocov
+  version: 3a69a0d2a4ef1f263e2d92b041a69593d6964fe8
+  subpackages:
+  - gocov
+- name: github.com/jstemmer/go-junit-report
+  version: cce73b49960a6473b4bb18efada12ce5f0208c37
 - name: github.com/TsuyoshiUshio/PactOnKubernetes
-  version: a8307dd91d72d880814a4d9e2dc1cf413e0e649d
+  version: 9c9360586e23a51e7dfb8ae86afbe77ec1b00900
   subpackages:
   - types
 testImports:

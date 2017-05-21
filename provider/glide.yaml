@@ -3,6 +3,11 @@ import:
 - package: github.com/TsuyoshiUshio/PactOnKubernetes
   subpackages:
   - types
+- package: github.com/axw/gocov
+  subpackages:
+  - gocov
+- package: github.com/jstemmer/go-junit-report
+- package: github.com/AlekSi/gocov-xml
 testImport:
 - package: github.com/pact-foundation/pact-go
   version: ~0.0.7
