@@ -5,7 +5,6 @@ ENV GOCOV_HOME /myapp/src/github.com/TsuyoshiUshio/PactOnKubernetes/consumer/ven
 ENV GOCOV_XML_HOME /myapp/src/github.com/TsuyoshiUshio/PactOnKubernetes/consumer/vendor/github.com/AlekSi/gocov-xml
 ENV JUNIT_REPORT_HOME /myapp/src/github.com/TsuyoshiUshio/PactOnKubernetes/consumer/vendor/github.com/jstemmer/go-junit-report
 ENV GOPATH /myapp
-ENV PACT_HOST localhost
 RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
 ADD . $APP_HOME

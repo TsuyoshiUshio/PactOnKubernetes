@@ -19,7 +19,7 @@ import (
 
 // test data
 var dir, _ = os.Getwd()
-var pactDir = fmt.Sprintf("%s/../pacts", dir)
+var pactDir = fmt.Sprintf("%s/pacts", dir)
 var logDir = fmt.Sprintf("%s/log", dir)
 var pact dsl.Pact
 var pactBrokerURL = os.Getenv("PACT_BROKER_URL")
@@ -35,8 +35,8 @@ func TestMain(m *testing.M) {
 
 	publishRequest := types.PublishRequest{
 		PactBroker:      pactBrokerURL,
-		PactURLs:        []string{"../pacts/recommendation-product.json"},
-		ConsumerVersion: "1.0.0",
+		PactURLs:        []string{"./pacts/recommendation-product.json"},
+		ConsumerVersion: "1.0.2",
 		Tags:            []string{"latest", "dev"},
 	}
 	p := dsl.Publisher{}
@@ -64,18 +64,13 @@ func setup() {
 
 func createPact() dsl.Pact {
 	pactDaemonPort := 6666
-	pactHost := os.Getenv("PACT_HOST")
-	if pactHost == "" {
-		pactHost = "localhost"
-	}
-	log.Printf("PACT_HOST:%s:", pactHost)
+
 	return dsl.Pact{
 		Port:     pactDaemonPort,
 		Consumer: "recommendation",
 		Provider: "product",
 		LogDir:   logDir,
 		PactDir:  pactDir,
-		Host:     pactHost,
 	}
 }
 
