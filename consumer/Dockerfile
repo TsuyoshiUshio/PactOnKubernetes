@@ -5,11 +5,13 @@ ENV GOCOV_HOME /myapp/src/github.com/TsuyoshiUshio/PactOnKubernetes/consumer/ven
 ENV GOCOV_XML_HOME /myapp/src/github.com/TsuyoshiUshio/PactOnKubernetes/consumer/vendor/github.com/AlekSi/gocov-xml
 ENV JUNIT_REPORT_HOME /myapp/src/github.com/TsuyoshiUshio/PactOnKubernetes/consumer/vendor/github.com/jstemmer/go-junit-report
 ENV GOPATH /myapp
+ENV GOCOV_HTML_HOME /myapp/src/gopkg.in/matm/v1/gocov-html
 RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
 ADD . $APP_HOME
 RUN glide install
 RUN glide get golang.org/x/tools/cover
+RUN go get gopkg.in/matm/v1/gocov-html
 RUN go build
 RUN go test -cover -c ./goconsumer
 WORKDIR $GOCOV_HOME
@@ -18,10 +20,13 @@ WORKDIR $GOCOV_XML_HOME
 RUN go build -o gocov-xml_linux
 WORKDIR $JUNIT_REPORT_HOME
 RUN go build -o go-junit-report_linux
+WORKDIR $GOCOV_HTML_HOME
+RUN go build -o gocov-html_linux
 WORKDIR $APP_HOME
 RUN mv $GOCOV_HOME/gocov_linux bin
 RUN mv $GOCOV_XML_HOME/gocov-xml_linux bin
 RUN mv $JUNIT_REPORT_HOME/go-junit-report_linux bin
+RUN mv $GOCOV_HTML_HOME/gocov-html_linux bin
 ENTRYPOINT ./script/startup.sh
 EXPOSE 8081
 

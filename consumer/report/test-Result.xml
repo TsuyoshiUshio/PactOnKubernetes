@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite tests="1" failures="0" time="1.020" name="">
+		<properties>
+			<property name="go.version" value="go1.8"></property>
+			<property name="coverage.statements.pct" value="44.8"></property>
+		</properties>
+		<testcase classname="" name="TestPactConsumerSearchHandler_ProductExists" time="1.020"></testcase>
+	</testsuite>
+</testsuites>

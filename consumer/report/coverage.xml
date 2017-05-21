@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-03.dtd">
+<coverage line-rate="0" branch-rate="0" version="" timestamp="1495389091447">
+	<packages>
+		<package name="github.com/TsuyoshiUshio/PactOnKubernetes/consumer/goconsumer" line-rate="0" branch-rate="0" complexity="0">
+			<classes>
+				<class name="-" filename="/Users/ushio/Codes/pact/samples/src/github.com/TsuyoshiUshio/PactOnKubernetes/consumer/goconsumer/recommend_service.go" line-rate="0" branch-rate="0" complexity="0">
+					<methods>
+						<method name="renderTemplate" signature="" line-rate="0" branch-rate="0">
+							<lines>
+								<line number="36" hits="1"></line>
+								<line number="37" hits="1"></line>
+								<line number="38" hits="0"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="36" hits="1"></line>
+						<line number="37" hits="1"></line>
+						<line number="38" hits="0"></line>
+					</lines>
+				</class>
+				<class name="Client" filename="/Users/ushio/Codes/pact/samples/src/github.com/TsuyoshiUshio/PactOnKubernetes/consumer/goconsumer/recommend_service.go" line-rate="0" branch-rate="0" complexity="0">
+					<methods>
+						<method name="searchHandler" signature="" line-rate="0" branch-rate="0">
+							<lines>
+								<line number="43" hits="1"></line>
+								<line number="44" hits="1"></line>
+								<line number="49" hits="1"></line>
+								<line number="50" hits="1"></line>
+								<line number="51" hits="0"></line>
+								<line number="52" hits="0"></line>
+								<line number="53" hits="0"></line>
+								<line number="55" hits="1"></line>
+								<line number="56" hits="1"></line>
+								<line number="57" hits="0"></line>
+								<line number="58" hits="0"></line>
+								<line number="59" hits="0"></line>
+								<line number="61" hits="1"></line>
+								<line number="62" hits="1"></line>
+								<line number="63" hits="1"></line>
+								<line number="64" hits="0"></line>
+								<line number="65" hits="0"></line>
+								<line number="66" hits="0"></line>
+								<line number="69" hits="1"></line>
+								<line number="73" hits="1"></line>
+							</lines>
+						</method>
+						<method name="viewHandler" signature="" line-rate="0" branch-rate="0">
+							<lines>
+								<line number="77" hits="0"></line>
+								<line number="81" hits="0"></line>
+							</lines>
+						</method>
+						<method name="Run" signature="" line-rate="0" branch-rate="0">
+							<lines>
+								<line number="86" hits="0"></line>
+								<line number="87" hits="0"></line>
+								<line number="88" hits="0"></line>
+								<line number="89" hits="0"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="43" hits="1"></line>
+						<line number="44" hits="1"></line>
+						<line number="49" hits="1"></line>
+						<line number="50" hits="1"></line>
+						<line number="51" hits="0"></line>
+						<line number="52" hits="0"></line>
+						<line number="53" hits="0"></line>
+						<line number="55" hits="1"></line>
+						<line number="56" hits="1"></line>
+						<line number="57" hits="0"></line>
+						<line number="58" hits="0"></line>
+						<line number="59" hits="0"></line>
+						<line number="61" hits="1"></line>
+						<line number="62" hits="1"></line>
+						<line number="63" hits="1"></line>
+						<line number="64" hits="0"></line>
+						<line number="65" hits="0"></line>
+						<line number="66" hits="0"></line>
+						<line number="69" hits="1"></line>
+						<line number="73" hits="1"></line>
+						<line number="77" hits="0"></line>
+						<line number="81" hits="0"></line>
+						<line number="86" hits="0"></line>
+						<line number="87" hits="0"></line>
+						<line number="88" hits="0"></line>
+						<line number="89" hits="0"></line>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>

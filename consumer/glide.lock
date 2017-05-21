@@ -1,5 +1,5 @@
 hash: 4649486fb35bc90c3029800986b979df6e14eb032be90abb5f3ef80cda2961ce
-updated: 2017-05-21T08:52:36.81143556+09:00
+updated: 2017-05-22T02:47:32.964975244+09:00
 imports:
 - name: github.com/AlekSi/gocov-xml
   version: d2f6da892a0d5e0b587526abf51349ad654ade51

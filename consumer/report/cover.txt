@@ -1,0 +1,12 @@
+mode: set
+github.com/TsuyoshiUshio/PactOnKubernetes/consumer/goconsumer/recommend_service.go:35.73,37.16 2 1
+github.com/TsuyoshiUshio/PactOnKubernetes/consumer/goconsumer/recommend_service.go:37.16,39.3 1 0
+github.com/TsuyoshiUshio/PactOnKubernetes/consumer/goconsumer/recommend_service.go:42.72,50.41 4 1
+github.com/TsuyoshiUshio/PactOnKubernetes/consumer/goconsumer/recommend_service.go:55.2,56.16 2 1
+github.com/TsuyoshiUshio/PactOnKubernetes/consumer/goconsumer/recommend_service.go:61.2,63.16 3 1
+github.com/TsuyoshiUshio/PactOnKubernetes/consumer/goconsumer/recommend_service.go:69.2,73.37 2 1
+github.com/TsuyoshiUshio/PactOnKubernetes/consumer/goconsumer/recommend_service.go:50.41,54.3 3 0
+github.com/TsuyoshiUshio/PactOnKubernetes/consumer/goconsumer/recommend_service.go:56.16,60.3 3 0
+github.com/TsuyoshiUshio/PactOnKubernetes/consumer/goconsumer/recommend_service.go:63.16,67.3 3 0
+github.com/TsuyoshiUshio/PactOnKubernetes/consumer/goconsumer/recommend_service.go:76.70,83.2 2 0
+github.com/TsuyoshiUshio/PactOnKubernetes/consumer/goconsumer/recommend_service.go:85.24,90.2 4 0
