@@ -1,0 +1,17 @@
+current directory: /pipeline/source/build/pact-mock_service-2.1.0/build/vendor/ruby/2.2.0/gems/json-2.1.0/ext/json
+/usr/local/bin/ruby -r ./siteconf20170515-680-1hjeqm3.rb extconf.rb
+creating Makefile
+
+current directory: /pipeline/source/build/pact-mock_service-2.1.0/build/vendor/ruby/2.2.0/gems/json-2.1.0/ext/json
+make "DESTDIR=" clean
+make[1]: Entering directory '/pipeline/source/build/pact-mock_service-2.1.0/build/vendor/ruby/2.2.0/gems/json-2.1.0/ext/json'
+make[1]: Leaving directory '/pipeline/source/build/pact-mock_service-2.1.0/build/vendor/ruby/2.2.0/gems/json-2.1.0/ext/json'
+
+current directory: /pipeline/source/build/pact-mock_service-2.1.0/build/vendor/ruby/2.2.0/gems/json-2.1.0/ext/json
+make "DESTDIR="
+make[1]: Entering directory '/pipeline/source/build/pact-mock_service-2.1.0/build/vendor/ruby/2.2.0/gems/json-2.1.0/ext/json'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/pipeline/source/build/pact-mock_service-2.1.0/build/vendor/ruby/2.2.0/gems/json-2.1.0/ext/json'
+
+current directory: /pipeline/source/build/pact-mock_service-2.1.0/build/vendor/ruby/2.2.0/gems/json-2.1.0/ext/json
+make "DESTDIR=" install
