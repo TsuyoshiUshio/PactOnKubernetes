@@ -5,3 +5,4 @@ echo "The go provider test starts"
 ./bin/pact-go_linux_amd64 daemon &
 ./product.test -test.v -test.coverprofile report/cover.txt 2>&1 | bin/go-junit-report_linux > report/test-Result.xml
 bin/gocov_linux convert report/cover.txt | bin/gocov-xml_linux > report/coverage.xml
+bin/gocov_linux convert report/cover.txt | bin/gocov-html_linux > report/report.html
