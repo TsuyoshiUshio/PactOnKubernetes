@@ -7,6 +7,7 @@ ENV JUNIT_REPORT_HOME /myapp/src/github.com/TsuyoshiUshio/PactOnKubernetes/provi
 ENV GOPATH /myapp
 RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
+RUN mkdir report
 ADD . $APP_HOME
 RUN glide install
 RUN glide get golang.org/x/tools/cover
