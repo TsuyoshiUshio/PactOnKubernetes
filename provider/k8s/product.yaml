@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: product
+spec:
+  ports:
+  - name: product
+    port: 9000
+    targetPort: 9000
+    protocol: TCP
+  selector:
+    app: product
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: product
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: product
+    spec:
+      containers:
+        - name: product
+          image: samplejapan.azurecr.io/provider:latest
+          env:
+            - name: PROVIDER_HOST
+              value: product
+          ports:
+            - containerPort: 8081
+      imagePullSecrets:
+        - name: simplejapankey
