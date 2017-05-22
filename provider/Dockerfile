@@ -12,6 +12,7 @@ RUN mkdir report
 ADD . $APP_HOME
 RUN glide install
 RUN glide get golang.org/x/tools/cover
+RUN go get gopkg.in/matm/v1/gocov-html
 RUN go build
 RUN go test -cover -c ./product
 WORKDIR $GOCOV_HOME
